@@ -1,0 +1,364 @@
+export interface ProfileData {
+  name: string;
+  headline: string;
+  shortDescription: string;
+  longBio: string;
+  dynamicRoles: string[];
+  avatarUrl: string;
+  heroImage?: string;
+  logoUrl?: string;
+  resumeUrl: string;
+  socialLinks: {
+    platform: string;
+    url: string;
+    icon: string;
+  }[];
+  stats: {
+    yearsExperience: string;
+    projectsCompleted: string;
+    technologies: string;
+    certificates: string;
+  };
+}
+
+export interface SkillData {
+  _id?: string;
+  name: string;
+  category: "Frontend" | "Backend" | "Database" | "AI / Machine Learning" | "DevOps & Cloud" | "Tools & Others";
+  icon: string;
+  proficiency: number;
+  years: number;
+  order: number;
+  isActive: boolean;
+}
+
+export interface ProjectData {
+  _id?: string;
+  title: string;
+  slug: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
+  featured: boolean;
+  order: number;
+}
+
+export interface CertificateData {
+  _id?: string;
+  title: string;
+  issuer: string;
+  image: string;
+  date: string;
+  credentialId: string;
+  verificationUrl: string;
+  order: number;
+  isActive: boolean;
+}
+
+export interface ExperienceData {
+  _id?: string;
+  title: string;
+  company: string;
+  companyUrl: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  current: boolean;
+  description: string[];
+  technologies: string[];
+  order: number;
+}
+
+export interface SiteSettingsData {
+  defaultTheme: "dark" | "light";
+  defaultAccent: "purple" | "cyan" | "green" | "orange" | "pink" | "red";
+  seoTitle: string;
+  seoDescription: string;
+  favicon: string;
+  ogImage: string;
+}
+
+export const initialProfile: ProfileData = {
+  name: "Purnendu Dutta",
+  headline: "AI Engineer & Full Stack Developer",
+  shortDescription: "I build intelligent systems and modern web applications that solve real-world problems.",
+  longBio: "I am a passionate software engineer specializing in building intelligent full-stack applications, scalable distributed architectures, and AI-powered systems. With deep expertise across Next.js, Node.js, Python, and Large Language Models, I design high-performance solutions that bridge the gap between advanced algorithms and seamless user experiences.",
+  dynamicRoles: [
+    "AI Engineer",
+    "Full Stack Developer",
+    "Web Developer",
+    "Software Engineer",
+    "Automation Developer",
+    "Problem Solver"
+  ],
+  avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+  heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+  logoUrl: "/logo.png",
+  resumeUrl: "/resume.pdf",
+  socialLinks: [
+    { platform: "GitHub", url: "https://github.com/Purnendudutta", icon: "Github" },
+    { platform: "LinkedIn", url: "https://www.linkedin.com/in/purnendudutta/", icon: "Linkedin" },
+    { platform: "Twitter/X", url: "https://twitter.com/Purnendu521", icon: "Twitter" },
+    { platform: "Email", url: "mailto:purnendudutta8172@gmail.com", icon: "Mail" }
+  ],
+  stats: {
+    yearsExperience: "4+",
+    projectsCompleted: "25+",
+    technologies: "30+",
+    certificates: "8+"
+  }
+};
+
+export const initialSkills: SkillData[] = [
+  // Frontend
+  { name: "React", category: "Frontend", icon: "Code2", proficiency: 95, years: 4, order: 1, isActive: true },
+  { name: "Next.js", category: "Frontend", icon: "Layers", proficiency: 92, years: 3, order: 2, isActive: true },
+  { name: "TypeScript", category: "Frontend", icon: "FileCode", proficiency: 90, years: 4, order: 3, isActive: true },
+  { name: "JavaScript", category: "Frontend", icon: "Code", proficiency: 95, years: 5, order: 4, isActive: true },
+  { name: "Tailwind CSS", category: "Frontend", icon: "Palette", proficiency: 95, years: 4, order: 5, isActive: true },
+  { name: "HTML5 / CSS3", category: "Frontend", icon: "Layout", proficiency: 98, years: 5, order: 6, isActive: true },
+  
+
+  // Backend
+  { name: "Node.js", category: "Backend", icon: "Server", proficiency: 92, years: 4, order: 9, isActive: true },
+  { name: "Python", category: "Backend", icon: "Terminal", proficiency: 90, years: 4, order: 10, isActive: true },
+  { name: "FastAPI", category: "Backend", icon: "Zap", proficiency: 88, years: 3, order: 11, isActive: true },
+  { name: "Express.js", category: "Backend", icon: "Cpu", proficiency: 90, years: 4, order: 12, isActive: true },
+  { name: "REST APIs", category: "Backend", icon: "Globe", proficiency: 96, years: 5, order: 13, isActive: true },
+  { name: "GraphQL", category: "Backend", icon: "Share2", proficiency: 82, years: 2, order: 14, isActive: true },
+
+  // Database
+  { name: "MongoDB", category: "Database", icon: "Database", proficiency: 92, years: 4, order: 15, isActive: true },
+  { name: "PostgreSQL", category: "Database", icon: "HardDrive", proficiency: 88, years: 3, order: 16, isActive: true },
+  { name: "Redis", category: "Database", icon: "Zap", proficiency: 84, years: 2, order: 17, isActive: true },
+  { name: "MySQL", category: "Database", icon: "Table", proficiency: 85, years: 3, order: 18, isActive: true },
+  { name: "Vector DBs", category: "Database", icon: "Layers", proficiency: 86, years: 2, order: 19, isActive: true },
+
+  // AI / Machine Learning
+  { name: "LLMs & Agents", category: "AI / Machine Learning", icon: "Bot", proficiency: 92, years: 2, order: 20, isActive: true },
+  { name: "Generative AI", category: "AI / Machine Learning", icon: "Sparkles", proficiency: 90, years: 2, order: 21, isActive: true },
+  { name: "RAG Systems", category: "AI / Machine Learning", icon: "Search", proficiency: 88, years: 2, order: 22, isActive: true },
+  { name: "LangChain & LangGraph", category: "AI / Machine Learning", icon: "Workflow", proficiency: 86, years: 2, order: 23, isActive: true },
+  { name: "OpenAI / Gemini APIs", category: "AI / Machine Learning", icon: "Cpu", proficiency: 94, years: 3, order: 24, isActive: true },
+  { name: "PyTorch", category: "AI / Machine Learning", icon: "Flame", proficiency: 78, years: 2, order: 25, isActive: true },
+
+  // DevOps & Cloud
+  { name: "Docker", category: "DevOps & Cloud", icon: "Box", proficiency: 88, years: 3, order: 26, isActive: true },
+  { name: "AWS (S3, EC2, Lambda)", category: "DevOps & Cloud", icon: "Cloud", proficiency: 85, years: 3, order: 27, isActive: true },
+  { name: "Git & GitHub", category: "DevOps & Cloud", icon: "GitBranch", proficiency: 96, years: 5, order: 28, isActive: true },
+  { name: "CI / CD Pipelines", category: "DevOps & Cloud", icon: "Repeat", proficiency: 84, years: 3, order: 29, isActive: true },
+  { name: "Vercel & Cloudflare", category: "DevOps & Cloud", icon: "Shield", proficiency: 92, years: 4, order: 30, isActive: true }
+];
+
+export const initialProjects: ProjectData[] = [
+  {
+    title: "AI Software Engineer Agent",
+    slug: "ai-software-engineer",
+    description: "Autonomous multi-agent developer system with dynamic tool calling, sandbox code execution, and real-time streamed reasoning.",
+    longDescription: "A cutting-edge autonomous AI coding agent platform built with Next.js, Python FastAPI, LangGraph, and Gemini 2.0. The system accepts complex software specs, plans iterative tasks, writes tested code in isolated sandboxes, and verifies execution automatically.",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["Next.js", "TypeScript", "Python", "FastAPI", "LangGraph", "Docker", "Tailwind CSS"],
+    githubUrl: "https://github.com/example/ai-software-engineer",
+    liveUrl: "https://ai-engineer.example.com",
+    featured: true,
+    order: 1
+  },
+  {
+    title: "Voice Desktop Assistant",
+    slug: "voice-desktop-assistant",
+    description: "Intelligent low-latency voice-driven assistant with real-time speech-to-intent analysis and OS automation triggers.",
+    longDescription: "A desktop-class companion application leveraging Gemini Live WebSocket streaming, custom wake-word neural engines, and local IPC hooks to automate complex multi-app desktop workflows smoothly.",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["React", "Electron", "Node.js", "WebSockets", "Python", "Speech AI"],
+    githubUrl: "https://github.com/example/voice-desktop-assistant",
+    liveUrl: "https://voice-assistant.example.com",
+    featured: true,
+    order: 2
+  },
+  {
+    title: "Developer Career Intelligence",
+    slug: "developer-career-intelligence",
+    description: "AI-powered recruitment and career intelligence dashboard featuring resume analysis, skill-gap radar, and interactive mock interviews.",
+    longDescription: "An end-to-end platform for developers to benchmark their technical competencies, receive structured LLM-guided mock interviews, and parse job descriptions against their GitHub portfolios with vector semantic search.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["Next.js", "MongoDB", "OpenAI", "Pinecone", "Tailwind CSS", "Recharts"],
+    githubUrl: "https://github.com/example/career-intelligence",
+    liveUrl: "https://career-intelligence.example.com",
+    featured: true,
+    order: 3
+  },
+  {
+    title: "Enterprise Cloud Nexus",
+    slug: "enterprise-cloud-nexus",
+    description: "High-performance distributed API gateway and microservice telemetry hub with real-time health monitors and rate limiting.",
+    longDescription: "A resilient distributed infrastructure dashboard providing visual traffic topology, JWT security inspection, zero-downtime canary deployment orchestration, and Prometheus telemetry metrics.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["Node.js", "Express", "Redis", "Docker", "AWS", "Grafana", "React"],
+    githubUrl: "https://github.com/example/cloud-nexus",
+    liveUrl: "https://cloud-nexus.example.com",
+    featured: false,
+    order: 4
+  },
+  {
+    title: "Neural Vision Studio",
+    slug: "neural-vision-studio",
+    description: "Real-time browser-based computer vision studio for bounding-box detection, background segmentation, and generative image editing.",
+    longDescription: "Browser-accelerated machine learning studio utilizing WebAssembly, WebGL, and custom PyTorch-exported ONNX models for instant client-side video processing without latency.",
+    image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["TypeScript", "WebAssembly", "TensorFlow.js", "Tailwind CSS", "Canvas API"],
+    githubUrl: "https://github.com/example/neural-vision-studio",
+    liveUrl: "https://neuralvision.example.com",
+    featured: false,
+    order: 5
+  },
+  {
+    title: "Quantum Data Grid",
+    slug: "quantum-data-grid",
+    description: "Sub-millisecond financial time-series visualization engine capable of rendering 100,000+ data points smoothly at 60 FPS.",
+    longDescription: "High-throughput financial analytics engine built for low-latency market order books, multi-dimensional filtering, and automated anomaly alert pipelines.",
+    image: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=1200&q=80",
+    technologies: ["React", "TypeScript", "WebSockets", "D3.js", "WebGL", "Rust"],
+    githubUrl: "https://github.com/example/quantum-data-grid",
+    liveUrl: "https://quantumgrid.example.com",
+    featured: false,
+    order: 6
+  }
+];
+
+export const initialCertificates: CertificateData[] = [
+  {
+    title: "AWS Certified Solutions Architect - Associate",
+    issuer: "Amazon Web Services (AWS)",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    date: "2026",
+    credentialId: "AWS-SAA-904812",
+    verificationUrl: "https://aws.amazon.com/verification",
+    order: 1,
+    isActive: true
+  },
+  {
+    title: "Google Cloud Professional Machine Learning Engineer",
+    issuer: "Google Cloud",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    date: "2025",
+    credentialId: "GCP-PMLE-883011",
+    verificationUrl: "https://cloud.google.com/certification",
+    order: 2,
+    isActive: true
+  },
+  {
+    title: "Generative AI with Large Language Models",
+    issuer: "DeepLearning.AI & AWS",
+    image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    date: "2025",
+    credentialId: "DLAI-LLM-55209",
+    verificationUrl: "https://coursera.org/verify",
+    order: 3,
+    isActive: true
+  },
+  {
+    title: "Meta Professional Full-Stack Engineer",
+    issuer: "Meta",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    date: "2025",
+    credentialId: "META-FSD-77124",
+    verificationUrl: "https://coursera.org/verify",
+    order: 4,
+    isActive: true
+  },
+  {
+    title: "MongoDB Certified Developer Associate",
+    issuer: "MongoDB University",
+    image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80",
+    date: "2024",
+    credentialId: "MDB-DEV-33019",
+    verificationUrl: "https://university.mongodb.com",
+    order: 5,
+    isActive: true
+  },
+  {
+    title: "Docker Certified Associate (DCA)",
+    issuer: "Docker Inc.",
+    image: "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=80",
+    date: "2024",
+    credentialId: "DCA-78401",
+    verificationUrl: "https://docker.com",
+    order: 6,
+    isActive: true
+  }
+];
+
+export const initialExperience: ExperienceData[] = [
+  {
+    title: "Senior Full Stack & AI Engineer",
+    company: "TechNova Systems",
+    companyUrl: "https://technova.example.com",
+    location: "San Francisco, CA (Remote)",
+    startDate: "2024-01-01",
+    endDate: "",
+    current: true,
+    description: [
+      "Architected and deployed high-concurrency LLM pipelines handling 500K+ daily agent interactions with sub-800ms latency.",
+      "Engineered full-stack responsive web interfaces using Next.js 14, Tailwind CSS, TypeScript, and micro-frontend modules.",
+      "Spearheaded distributed vector database caching strategy in Redis & Pinecone, decreasing query latency by 45%.",
+      "Mentored a team of 6 engineers in modern full-stack patterns, CI/CD automated testing, and secure API design."
+    ],
+    technologies: ["Next.js", "TypeScript", "Python", "FastAPI", "MongoDB", "Redis", "Docker", "AWS"],
+    order: 1
+  },
+  {
+    title: "Full Stack Software Developer",
+    company: "Nexus Labs",
+    companyUrl: "https://nexuslabs.example.com",
+    location: "Boston, MA",
+    startDate: "2023-03-01",
+    endDate: "2023-12-31",
+    current: false,
+    description: [
+      "Built enterprise SaaS analytics dashboards and RESTful microservices utilized by over 80 enterprise clients.",
+      "Implemented real-time WebSocket telemetry for infrastructure monitoring with 99.99% uptime compliance.",
+      "Optimized MongoDB aggregations and indexing, reducing heavy database query times from 4.2s to 180ms."
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "TypeScript", "Tailwind CSS", "Docker"],
+    order: 2
+  },
+  {
+    title: "Software Engineering Intern",
+    company: "Quantum Innovations",
+    companyUrl: "https://quantuminno.example.com",
+    location: "New York, NY",
+    startDate: "2022-06-01",
+    endDate: "2023-02-28",
+    current: false,
+    description: [
+      "Collaborated on designing and developing responsive UI components with React, TypeScript, and Framer Motion.",
+      "Integrated third-party OAuth authentication, Stripe payment webhooks, and automated email dispatch systems.",
+      "Authored unit and integration test suites achieving 92% code coverage with Jest and Cypress."
+    ],
+    technologies: ["React", "JavaScript", "Node.js", "Tailwind CSS", "Git", "Jest"],
+    order: 3
+  }
+];
+
+export const initialContact = {
+  email: "purnendu.dutta@example.com",
+  phone: "+1 (555) 019-2834",
+  location: "San Francisco, CA / Open to Remote",
+  availabilityStatus: "Available for Full-Time Roles & Strategic Projects",
+  github: "https://github.com",
+  linkedin: "https://linkedin.com",
+  twitter: "https://twitter.com",
+  contactEmailDestination: "purnendu.dutta@example.com"
+};
+
+export const initialSiteSettings: SiteSettingsData = {
+  defaultTheme: "dark",
+  defaultAccent: "purple",
+  seoTitle: "Purnendu Dutta | AI Engineer & Full Stack Developer",
+  seoDescription: "Professional developer portfolio showcasing intelligent systems, full-stack web applications, technical skills, experience, and verified certifications.",
+  favicon: "/favicon.ico",
+  ogImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
+};
