@@ -63,6 +63,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               src={project.image || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"}
               alt={project.title}
               fill
+              sizes="(max-width: 768px) 100vw, 800px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />

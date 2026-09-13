@@ -6,7 +6,7 @@ import { getAuthFromRequest } from "@/lib/auth";
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = getAuthFromRequest(req);
@@ -14,7 +14,7 @@ export async function PUT(
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
     }
 
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json();
 
     // Update in-memory fallback
@@ -41,7 +41,7 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = getAuthFromRequest(req);
@@ -49,7 +49,7 @@ export async function DELETE(
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
     }
 
-    const { id } = params;
+    const { id } = await params;
 
     fallbackStore.skills = fallbackStore.skills.filter((s) => s._id !== id);
     saveStore();

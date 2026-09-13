@@ -12,9 +12,9 @@
       "Automation Developer",
       "Problem Solver"
     ],
-    "avatarUrl": "/uploads/1788849584572-IMG20251211134308.jpg",
-    "heroImage": "/uploads/1788849584572-IMG20251211134308.jpg",
-    "logoUrl": "/logo.png",
+    "avatarUrl": "/uploads/1789285286651-image.png",
+    "heroImage": "/uploads/1789285286651-image.png",
+    "logoUrl": "/uploads/1789285947835-image.png",
     "resumeUrl": "/resume.pdf",
     "socialLinks": [
       {
@@ -476,7 +476,7 @@
     {
       "title": "Generative AI with Large Language Models",
       "issuer": "DeepLearning.AI & AWS",
-      "image": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
       "date": "2025",
       "credentialId": "DLAI-LLM-55209",
       "verificationUrl": "https://coursera.org/verify",

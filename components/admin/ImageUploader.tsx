@@ -88,6 +88,7 @@ export default function ImageUploader({
             src={value}
             alt="Uploaded preview"
             fill
+            sizes="(max-width: 768px) 100vw, 400px"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3">

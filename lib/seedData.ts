@@ -252,7 +252,7 @@ export const initialCertificates: CertificateData[] = [
   {
     title: "Generative AI with Large Language Models",
     issuer: "DeepLearning.AI & AWS",
-    image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
     date: "2025",
     credentialId: "DLAI-LLM-55209",
     verificationUrl: "https://coursera.org/verify",

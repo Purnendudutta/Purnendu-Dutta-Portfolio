@@ -6,7 +6,7 @@ import { getAuthFromRequest } from "@/lib/auth";
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = getAuthFromRequest(req);
@@ -14,7 +14,7 @@ export async function PUT(
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
     }
 
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json();
 
     const idx = fallbackStore.certificates.findIndex((c) => c._id === id);
@@ -40,7 +40,7 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const session = getAuthFromRequest(req);
@@ -48,7 +48,7 @@ export async function DELETE(
       return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
     }
 
-    const { id } = params;
+    const { id } = await params;
     fallbackStore.certificates = fallbackStore.certificates.filter((c) => c._id !== id);
     saveStore();
 

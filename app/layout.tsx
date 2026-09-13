@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark" data-accent="purple" suppressHydrationWarning>
+    <html lang="en" className="dark" data-accent="purple" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="min-h-screen bg-surface-bg text-surface-text selection:bg-accent selection:text-white antialiased">
         <ThemeProvider>
           <ToastProvider>
