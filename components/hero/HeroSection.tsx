@@ -34,7 +34,7 @@ export default function HeroSection({ profile }: HeroSectionProps) {
       ? profile.dynamicRoles
       : ["AI Engineer", "Full Stack Developer", "Web Developer", "Software Engineer"];
 
-  const heroImageSrc = profile?.heroImage || profile?.avatarUrl || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
+  const heroImageSrc = profile?.heroImage || profile?.avatarUrl || "/uploads/1788849584572-IMG20251211134308.jpg";
 
   return (
     <section

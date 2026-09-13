@@ -11,13 +11,13 @@ interface HeroFrameProps {
 }
 
 export default function HeroFrame({
-  imageSrc = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+  imageSrc = "/uploads/1788849584572-IMG20251211134308.jpg",
   name = "Purnendu Dutta",
 }: HeroFrameProps) {
   const displayImage =
     imageSrc && imageSrc.trim() !== ""
       ? imageSrc
-      : "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80";
+      : "/uploads/1788849584572-IMG20251211134308.jpg";
 
   return (
     <div className="relative w-full max-w-[420px] sm:max-w-[460px] aspect-square flex items-center justify-center select-none py-4">

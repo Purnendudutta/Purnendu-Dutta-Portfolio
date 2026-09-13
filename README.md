@@ -2,62 +2,6 @@
 
 A production-quality, responsive developer portfolio with a dark futuristic aesthetic (deep navy/black, neon purple & electric blue accents, glassmorphism cards, glowing borders, and particle animations), complete with real-time dynamic Typewriter animations, 6 customizable Accent Color themes, Day/Night mode, and a full-featured Admin CMS with MongoDB integration.
 
----
-
-## ✨ Features
-
-### 🌐 Public Portfolio
-1. **Sticky Glassmorphic Navigation Bar**:
-   - Dynamic Logo `</> PURNENDU`
-   - Smooth animated underline with neon glow on hover and active section tracking
-   - Day/Night Mode switcher
-   - 6 Accent Color Themes (Purple/Blue, Cyan, Green, Orange, Pink, Red) with instant live site updates and `localStorage` persistence
-   - Mobile slide-out glassmorphism drawer
-   - Clean navigation without administrative clutter
-2. **Hero Section with Typewriter Effect**:
-   - Dynamic character-by-character typewriter loop with realistic cursor blink
-   - Call-to-action buttons: `View My Work` and `Download CV`
-   - Interactive futuristic tech illustration with orbiting nodes (Code, AI Engine, Database, Cloud, Terminal, API) and pulsing circuit lines
-   - Social links (GitHub, LinkedIn, Twitter/X, Email)
-3. **About Me**:
-   - Professional bio, engineering narrative, and core competencies
-   - 4 animated metric counters (Years of Experience, Projects, Technologies, Certificates)
-4. **Categorized Skills**:
-   - Grouped and filterable by category: Frontend, Backend, Database, AI / Machine Learning, DevOps & Cloud, Tools
-   - Interactive skill cards with proficiency indicators, experience years, and glowing hover lift
-5. **Featured Projects**:
-   - Glassmorphism showcase cards with thumbnail zoom, tech stack pills, and live demo / source code links
-   - Full-detail project preview modal
-   - "View All Projects" toggle
-6. **Certificates & Verified Badges**:
-   - Showcase cards with issuing organization, date, credential ID, and verification links
-   - Full credential preview modal
-7. **Experience Vertical Timeline**:
-   - Glowing vertical timeline with animated nodes and "Present" status indicators
-   - Role title, company, location, date ranges, bullet point responsibilities, and tech chips
-8. **Contact Section & Details**:
-   - Interactive Contact Form with full validation, loading spinner, and success toast feedback
-   - Contact Details card with email, phone, location, and social channels
-   - **Admin Panel Entry point**: Dedicated `[ ⚙ Admin Panel → ]` link situated exclusively at the bottom of the contact details card
-9. **Minimal Footer**:
-   - Copyright notice, tech stack attribution, and back-to-top button
-
----
-
-### 🛡️ Admin Panel & CMS (`/admin`)
-- **Route Protection**: Next.js Middleware guarding `/admin/dashboard/*` with JWT session cookie validation
-- **Modern Glassmorphic Login**: Secure authentication with bcrypt password hashing
-- **Dashboard Overview**: Metrics count, quick action shortcuts, and recent inbound message alerts
-- **Hero & Typewriter Roles Editor**: Add, edit, remove, and reorder typewriter phrases with instant public updates
-- **About & Statistics Editor**: Update narrative bio and metric counters
-- **Skills Manager**: Complete CRUD operations, category assignments, and proficiency sliders
-- **Projects Manager**: Full CRUD, image uploads, tech stack tags, and featured project toggles
-- **Certificates Manager**: Full CRUD, image uploads, issuer details, and credential links
-- **Experience Manager**: Full CRUD for career timeline entries and "Current Position" toggles
-- **Contact & Inbound Inbox**: View, manage, and delete messages submitted via the public contact form
-- **Site Settings & SEO**: Manage default themes, meta titles, descriptions, and database reset triggers
-
----
 
 ## 🛠️ Technology Stack
 
