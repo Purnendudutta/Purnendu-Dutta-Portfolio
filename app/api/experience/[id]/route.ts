@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Experience from "@/models/Experience";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -26,9 +27,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const experience = await Experience.findByIdAndUpdate(id, body, { new: true });
+      revalidatePath("/");
       return NextResponse.json({ success: true, experience });
     }
 
+    revalidatePath("/");
     return NextResponse.json({
       success: true,
       experience: idx !== -1 ? fallbackStore.experience[idx] : body,
@@ -57,6 +60,7 @@ export async function DELETE(
       await Experience.findByIdAndDelete(id);
     }
 
+    revalidatePath("/");
     return NextResponse.json({ success: true, message: "Experience deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete experience" }, { status: 500 });

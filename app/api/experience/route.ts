@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Experience from "@/models/Experience";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -45,12 +46,14 @@ export async function POST(req: NextRequest) {
       const exp = await Experience.create(newExpData);
       fallbackStore.experience.push({ ...newExpData, _id: exp._id.toString() });
       saveStore();
+      revalidatePath("/");
       return NextResponse.json({ success: true, experience: exp });
     }
 
     const memoryExp = { ...newExpData, _id: `exp_${Date.now()}` };
     fallbackStore.experience.push(memoryExp);
     saveStore();
+    revalidatePath("/");
     return NextResponse.json({ success: true, experience: memoryExp });
   } catch (error: any) {
     console.error("Create experience error:", error);

@@ -50,7 +50,7 @@ export async function connectDB() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
-      serverSelectionTimeoutMS: 1200, // Fast 1.2s timeout instead of 4+ seconds
+      serverSelectionTimeoutMS: 8000, // 8s timeout to accommodate cloud serverless cold starts
     };
 
     cached.promise = mongoose

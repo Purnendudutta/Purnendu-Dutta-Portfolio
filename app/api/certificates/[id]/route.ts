@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Certificate from "@/models/Certificate";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -26,9 +27,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const certificate = await Certificate.findByIdAndUpdate(id, body, { new: true });
+      revalidatePath("/");
       return NextResponse.json({ success: true, certificate });
     }
 
+    revalidatePath("/");
     return NextResponse.json({
       success: true,
       certificate: idx !== -1 ? fallbackStore.certificates[idx] : body,
@@ -57,6 +60,7 @@ export async function DELETE(
       await Certificate.findByIdAndDelete(id);
     }
 
+    revalidatePath("/");
     return NextResponse.json({ success: true, message: "Certificate deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete certificate" }, { status: 500 });

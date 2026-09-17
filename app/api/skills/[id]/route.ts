@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Skill from "@/models/Skill";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -27,9 +28,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const skill = await Skill.findByIdAndUpdate(id, body, { new: true });
+      revalidatePath("/");
       return NextResponse.json({ success: true, skill });
     }
 
+    revalidatePath("/");
     return NextResponse.json({
       success: true,
       skill: idx !== -1 ? fallbackStore.skills[idx] : body,
@@ -59,6 +62,7 @@ export async function DELETE(
       await Skill.findByIdAndDelete(id);
     }
 
+    revalidatePath("/");
     return NextResponse.json({ success: true, message: "Skill deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete skill" }, { status: 500 });

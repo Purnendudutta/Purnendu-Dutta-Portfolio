@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import SiteSettings from "@/models/SiteSettings";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -39,9 +40,11 @@ export async function PUT(req: NextRequest) {
         Object.assign(settings, body);
         await settings.save();
       }
+      revalidatePath("/");
       return NextResponse.json({ success: true, settings });
     }
 
+    revalidatePath("/");
     return NextResponse.json({ success: true, settings: fallbackStore.siteSettings });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to update settings" }, { status: 500 });

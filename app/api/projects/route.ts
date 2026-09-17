@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Project from "@/models/Project";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -50,12 +51,14 @@ export async function POST(req: NextRequest) {
       const project = await Project.create(newProjectData);
       fallbackStore.projects.push({ ...newProjectData, _id: project._id.toString() });
       saveStore();
+      revalidatePath("/");
       return NextResponse.json({ success: true, project });
     }
 
     const memoryProject = { ...newProjectData, _id: `proj_${Date.now()}` };
     fallbackStore.projects.push(memoryProject);
     saveStore();
+    revalidatePath("/");
     return NextResponse.json({ success: true, project: memoryProject });
   } catch (error: any) {
     console.error("Create project error:", error);

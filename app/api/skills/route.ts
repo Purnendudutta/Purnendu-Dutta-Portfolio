@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Skill from "@/models/Skill";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -42,12 +43,14 @@ export async function POST(req: NextRequest) {
       const skill = await Skill.create(newSkillData);
       fallbackStore.skills.push({ ...newSkillData, _id: skill._id.toString() });
       saveStore();
+      revalidatePath("/");
       return NextResponse.json({ success: true, skill });
     }
 
     const memorySkill = { ...newSkillData, _id: `skill_${Date.now()}` };
     fallbackStore.skills.push(memorySkill);
     saveStore();
+    revalidatePath("/");
     return NextResponse.json({ success: true, skill: memorySkill });
   } catch (error: any) {
     console.error("Create skill error:", error);

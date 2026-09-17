@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Profile from "@/models/Profile";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -41,9 +42,11 @@ export async function PUT(req: NextRequest) {
         Object.assign(profile, body);
         await profile.save();
       }
+      revalidatePath("/");
       return NextResponse.json({ success: true, profile });
     }
 
+    revalidatePath("/");
     return NextResponse.json({ success: true, profile: fallbackStore.profile });
   } catch (error: any) {
     console.error("Profile update error:", error);

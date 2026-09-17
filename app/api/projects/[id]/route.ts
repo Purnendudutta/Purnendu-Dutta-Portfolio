@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectDB } from "@/lib/mongodb";
 import Project from "@/models/Project";
 import { fallbackStore, saveStore } from "@/lib/dataStore";
@@ -27,9 +28,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const project = await Project.findByIdAndUpdate(id, body, { new: true });
+      revalidatePath("/");
       return NextResponse.json({ success: true, project });
     }
 
+    revalidatePath("/");
     return NextResponse.json({
       success: true,
       project: idx !== -1 ? fallbackStore.projects[idx] : body,
@@ -58,6 +61,7 @@ export async function DELETE(
       await Project.findByIdAndDelete(id);
     }
 
+    revalidatePath("/");
     return NextResponse.json({ success: true, message: "Project deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete project" }, { status: 500 });
