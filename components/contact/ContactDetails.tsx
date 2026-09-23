@@ -62,7 +62,7 @@ export default function ContactDetails({ profile }: ContactDetailsProps) {
           </div>
           <div className="flex flex-wrap gap-2.5">
             <a
-              href="https://github.com"
+              href="https://github.com/Purnendudutta"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-card border border-surface-border hover:border-accent text-xs font-medium text-surface-text hover:text-accent transition-all"
@@ -71,7 +71,7 @@ export default function ContactDetails({ profile }: ContactDetailsProps) {
               <span>GitHub</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/purnendudutta"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-card border border-surface-border hover:border-accent text-xs font-medium text-surface-text hover:text-accent transition-all"
@@ -80,7 +80,7 @@ export default function ContactDetails({ profile }: ContactDetailsProps) {
               <span>LinkedIn</span>
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/purnendu521"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-card border border-surface-border hover:border-accent text-xs font-medium text-surface-text hover:text-accent transition-all"
