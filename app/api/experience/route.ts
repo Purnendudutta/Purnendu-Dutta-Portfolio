@@ -46,14 +46,14 @@ export async function POST(req: NextRequest) {
       const exp = await Experience.create(newExpData);
       fallbackStore.experience.push({ ...newExpData, _id: exp._id.toString() });
       saveStore();
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, experience: exp });
     }
 
     const memoryExp = { ...newExpData, _id: `exp_${Date.now()}` };
     fallbackStore.experience.push(memoryExp);
     saveStore();
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, experience: memoryExp });
   } catch (error: any) {
     console.error("Create experience error:", error);

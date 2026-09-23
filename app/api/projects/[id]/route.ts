@@ -28,11 +28,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const project = await Project.findByIdAndUpdate(id, body, { new: true });
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, project });
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({
       success: true,
       project: idx !== -1 ? fallbackStore.projects[idx] : body,
@@ -61,7 +61,7 @@ export async function DELETE(
       await Project.findByIdAndDelete(id);
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, message: "Project deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete project" }, { status: 500 });

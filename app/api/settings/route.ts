@@ -40,11 +40,11 @@ export async function PUT(req: NextRequest) {
         Object.assign(settings, body);
         await settings.save();
       }
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, settings });
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, settings: fallbackStore.siteSettings });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to update settings" }, { status: 500 });

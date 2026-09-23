@@ -42,11 +42,11 @@ export async function PUT(req: NextRequest) {
         Object.assign(profile, body);
         await profile.save();
       }
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, profile });
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, profile: fallbackStore.profile });
   } catch (error: any) {
     console.error("Profile update error:", error);

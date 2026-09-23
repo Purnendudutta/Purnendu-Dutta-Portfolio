@@ -17,6 +17,8 @@ import Experience from "@/models/Experience";
 import { fallbackStore } from "@/lib/dataStore";
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const fetchCache = "force-no-store";
 
 async function getPortfolioData() {
   try {

@@ -44,14 +44,14 @@ export async function POST(req: NextRequest) {
       const cert = await Certificate.create(newCertData);
       fallbackStore.certificates.push({ ...newCertData, _id: cert._id.toString() });
       saveStore();
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, certificate: cert });
     }
 
     const memoryCert = { ...newCertData, _id: `cert_${Date.now()}` };
     fallbackStore.certificates.push(memoryCert);
     saveStore();
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, certificate: memoryCert });
   } catch (error: any) {
     console.error("Create certificate error:", error);

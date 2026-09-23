@@ -27,11 +27,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const experience = await Experience.findByIdAndUpdate(id, body, { new: true });
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, experience });
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({
       success: true,
       experience: idx !== -1 ? fallbackStore.experience[idx] : body,
@@ -60,7 +60,7 @@ export async function DELETE(
       await Experience.findByIdAndDelete(id);
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, message: "Experience deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete experience" }, { status: 500 });

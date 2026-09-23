@@ -28,11 +28,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const skill = await Skill.findByIdAndUpdate(id, body, { new: true });
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, skill });
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({
       success: true,
       skill: idx !== -1 ? fallbackStore.skills[idx] : body,
@@ -62,7 +62,7 @@ export async function DELETE(
       await Skill.findByIdAndDelete(id);
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, message: "Skill deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete skill" }, { status: 500 });

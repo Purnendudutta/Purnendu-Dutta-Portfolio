@@ -1,5 +1,6 @@
 {
   "profile": {
+    "_id": "6ab046054b71dc9278b2d44a",
     "name": "Purnendu Dutta",
     "headline": "AI Engineer & Full Stack Developer",
     "shortDescription": "I build intelligent systems and modern web applications that solve real-world problems.",
@@ -20,22 +21,26 @@
       {
         "platform": "GitHub",
         "url": "https://github.com/Purnendudutta",
-        "icon": "Github"
+        "icon": "Github",
+        "_id": "6ab051543daa6a42f6a14bf0"
       },
       {
         "platform": "LinkedIn",
         "url": "https://www.linkedin.com/in/purnendudutta/",
-        "icon": "Linkedin"
+        "icon": "Linkedin",
+        "_id": "6ab051543daa6a42f6a14bf1"
       },
       {
-        "platform": "Twitter/X",
-        "url": "https://twitter.com/Purnendu521",
-        "icon": "Twitter"
+        "platform": "Twitter",
+        "url": "https://twitter.com/purnendu521",
+        "icon": "Twitter",
+        "_id": "6ab051543daa6a42f6a14bf2"
       },
       {
         "platform": "Email",
         "url": "mailto:purnendudutta8172@gmail.com",
-        "icon": "Mail"
+        "icon": "Mail",
+        "_id": "6ab051543daa6a42f6a14bf3"
       }
     ],
     "stats": {
@@ -43,10 +48,14 @@
       "projectsCompleted": "5+",
       "technologies": "20+",
       "certificates": "8+"
-    }
+    },
+    "createdAt": "2026-09-20T20:45:57.548Z",
+    "updatedAt": "2026-09-23T10:37:10.049Z",
+    "__v": 3
   },
   "skills": [
     {
+      "_id": "6ab046054b71dc9278b2d44b",
       "name": "React",
       "category": "Frontend",
       "icon": "Code2",
@@ -54,9 +63,11 @@
       "years": 4,
       "order": 1,
       "isActive": true,
-      "_id": "skill_1"
+      "createdAt": "2026-09-20T20:45:57.648Z",
+      "updatedAt": "2026-09-20T20:45:57.648Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d44c",
       "name": "Next.js",
       "category": "Frontend",
       "icon": "Layers",
@@ -64,9 +75,11 @@
       "years": 3,
       "order": 2,
       "isActive": true,
-      "_id": "skill_2"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d44d",
       "name": "TypeScript",
       "category": "Frontend",
       "icon": "FileCode",
@@ -74,9 +87,11 @@
       "years": 4,
       "order": 3,
       "isActive": true,
-      "_id": "skill_3"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d44e",
       "name": "JavaScript",
       "category": "Frontend",
       "icon": "Code",
@@ -84,9 +99,11 @@
       "years": 5,
       "order": 4,
       "isActive": true,
-      "_id": "skill_4"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d44f",
       "name": "Tailwind CSS",
       "category": "Frontend",
       "icon": "Palette",
@@ -94,9 +111,11 @@
       "years": 4,
       "order": 5,
       "isActive": true,
-      "_id": "skill_5"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d450",
       "name": "HTML5 / CSS3",
       "category": "Frontend",
       "icon": "Layout",
@@ -104,9 +123,11 @@
       "years": 5,
       "order": 6,
       "isActive": true,
-      "_id": "skill_6"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d451",
       "name": "Node.js",
       "category": "Backend",
       "icon": "Server",
@@ -114,9 +135,11 @@
       "years": 4,
       "order": 9,
       "isActive": true,
-      "_id": "skill_7"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d452",
       "name": "Python",
       "category": "Backend",
       "icon": "Terminal",
@@ -124,9 +147,11 @@
       "years": 4,
       "order": 10,
       "isActive": true,
-      "_id": "skill_8"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d453",
       "name": "FastAPI",
       "category": "Backend",
       "icon": "Zap",
@@ -134,9 +159,11 @@
       "years": 3,
       "order": 11,
       "isActive": true,
-      "_id": "skill_9"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d454",
       "name": "Express.js",
       "category": "Backend",
       "icon": "Cpu",
@@ -144,9 +171,11 @@
       "years": 4,
       "order": 12,
       "isActive": true,
-      "_id": "skill_10"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d455",
       "name": "REST APIs",
       "category": "Backend",
       "icon": "Globe",
@@ -154,9 +183,11 @@
       "years": 5,
       "order": 13,
       "isActive": true,
-      "_id": "skill_11"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d456",
       "name": "GraphQL",
       "category": "Backend",
       "icon": "Share2",
@@ -164,9 +195,11 @@
       "years": 2,
       "order": 14,
       "isActive": true,
-      "_id": "skill_12"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d457",
       "name": "MongoDB",
       "category": "Database",
       "icon": "Database",
@@ -174,9 +207,11 @@
       "years": 4,
       "order": 15,
       "isActive": true,
-      "_id": "skill_13"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d458",
       "name": "PostgreSQL",
       "category": "Database",
       "icon": "HardDrive",
@@ -184,19 +219,11 @@
       "years": 3,
       "order": 16,
       "isActive": true,
-      "_id": "skill_14"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
-      "name": "Redis",
-      "category": "Database",
-      "icon": "Zap",
-      "proficiency": 84,
-      "years": 2,
-      "order": 17,
-      "isActive": true,
-      "_id": "skill_15"
-    },
-    {
+      "_id": "6ab046054b71dc9278b2d45a",
       "name": "MySQL",
       "category": "Database",
       "icon": "Table",
@@ -204,9 +231,11 @@
       "years": 3,
       "order": 18,
       "isActive": true,
-      "_id": "skill_16"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d45b",
       "name": "Vector DBs",
       "category": "Database",
       "icon": "Layers",
@@ -214,9 +243,11 @@
       "years": 2,
       "order": 19,
       "isActive": true,
-      "_id": "skill_17"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d45c",
       "name": "LLMs & Agents",
       "category": "AI / Machine Learning",
       "icon": "Bot",
@@ -224,9 +255,11 @@
       "years": 2,
       "order": 20,
       "isActive": true,
-      "_id": "skill_18"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d45d",
       "name": "Generative AI",
       "category": "AI / Machine Learning",
       "icon": "Sparkles",
@@ -234,9 +267,11 @@
       "years": 2,
       "order": 21,
       "isActive": true,
-      "_id": "skill_19"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d45e",
       "name": "RAG Systems",
       "category": "AI / Machine Learning",
       "icon": "Search",
@@ -244,9 +279,11 @@
       "years": 2,
       "order": 22,
       "isActive": true,
-      "_id": "skill_20"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d45f",
       "name": "LangChain & LangGraph",
       "category": "AI / Machine Learning",
       "icon": "Workflow",
@@ -254,9 +291,11 @@
       "years": 2,
       "order": 23,
       "isActive": true,
-      "_id": "skill_21"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d460",
       "name": "OpenAI / Gemini APIs",
       "category": "AI / Machine Learning",
       "icon": "Cpu",
@@ -264,9 +303,11 @@
       "years": 3,
       "order": 24,
       "isActive": true,
-      "_id": "skill_22"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d461",
       "name": "PyTorch",
       "category": "AI / Machine Learning",
       "icon": "Flame",
@@ -274,9 +315,11 @@
       "years": 2,
       "order": 25,
       "isActive": true,
-      "_id": "skill_23"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d462",
       "name": "Docker",
       "category": "DevOps & Cloud",
       "icon": "Box",
@@ -284,9 +327,11 @@
       "years": 3,
       "order": 26,
       "isActive": true,
-      "_id": "skill_24"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d463",
       "name": "AWS (S3, EC2, Lambda)",
       "category": "DevOps & Cloud",
       "icon": "Cloud",
@@ -294,9 +339,11 @@
       "years": 3,
       "order": 27,
       "isActive": true,
-      "_id": "skill_25"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d464",
       "name": "Git & GitHub",
       "category": "DevOps & Cloud",
       "icon": "GitBranch",
@@ -304,9 +351,11 @@
       "years": 5,
       "order": 28,
       "isActive": true,
-      "_id": "skill_26"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d465",
       "name": "CI / CD Pipelines",
       "category": "DevOps & Cloud",
       "icon": "Repeat",
@@ -314,9 +363,11 @@
       "years": 3,
       "order": 29,
       "isActive": true,
-      "_id": "skill_27"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d466",
       "name": "Vercel & Cloudflare",
       "category": "DevOps & Cloud",
       "icon": "Shield",
@@ -324,11 +375,13 @@
       "years": 4,
       "order": 30,
       "isActive": true,
-      "_id": "skill_28"
+      "createdAt": "2026-09-20T20:45:57.649Z",
+      "updatedAt": "2026-09-20T20:45:57.649Z"
     }
   ],
   "projects": [
     {
+      "_id": "6ab046054b71dc9278b2d467",
       "title": "AI Software Engineer Agent",
       "slug": "ai-software-engineer",
       "description": "Autonomous multi-agent developer system with dynamic tool calling, sandbox code execution, and real-time streamed reasoning.",
@@ -347,9 +400,11 @@
       "liveUrl": "https://ai-engineer.example.com",
       "featured": true,
       "order": 1,
-      "_id": "proj_1"
+      "createdAt": "2026-09-20T20:45:57.726Z",
+      "updatedAt": "2026-09-20T20:45:57.726Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d468",
       "title": "Voice Desktop Assistant",
       "slug": "voice-desktop-assistant",
       "description": "Intelligent low-latency voice-driven assistant with real-time speech-to-intent analysis and OS automation triggers.",
@@ -367,9 +422,11 @@
       "liveUrl": "https://voice-assistant.example.com",
       "featured": true,
       "order": 2,
-      "_id": "proj_2"
+      "createdAt": "2026-09-20T20:45:57.726Z",
+      "updatedAt": "2026-09-20T20:45:57.726Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d469",
       "title": "Developer Career Intelligence",
       "slug": "developer-career-intelligence",
       "description": "AI-powered recruitment and career intelligence dashboard featuring resume analysis, skill-gap radar, and interactive mock interviews.",
@@ -387,9 +444,11 @@
       "liveUrl": "https://career-intelligence.example.com",
       "featured": true,
       "order": 3,
-      "_id": "proj_3"
+      "createdAt": "2026-09-20T20:45:57.726Z",
+      "updatedAt": "2026-09-20T20:45:57.726Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d46a",
       "title": "Enterprise Cloud Nexus",
       "slug": "enterprise-cloud-nexus",
       "description": "High-performance distributed API gateway and microservice telemetry hub with real-time health monitors and rate limiting.",
@@ -408,9 +467,11 @@
       "liveUrl": "https://cloud-nexus.example.com",
       "featured": false,
       "order": 4,
-      "_id": "proj_4"
+      "createdAt": "2026-09-20T20:45:57.726Z",
+      "updatedAt": "2026-09-20T20:45:57.726Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d46b",
       "title": "Neural Vision Studio",
       "slug": "neural-vision-studio",
       "description": "Real-time browser-based computer vision studio for bounding-box detection, background segmentation, and generative image editing.",
@@ -427,31 +488,13 @@
       "liveUrl": "https://neuralvision.example.com",
       "featured": false,
       "order": 5,
-      "_id": "proj_5"
-    },
-    {
-      "title": "Quantum Data Grid",
-      "slug": "quantum-data-grid",
-      "description": "Sub-millisecond financial time-series visualization engine capable of rendering 100,000+ data points smoothly at 60 FPS.",
-      "longDescription": "High-throughput financial analytics engine built for low-latency market order books, multi-dimensional filtering, and automated anomaly alert pipelines.",
-      "image": "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=1200&q=80",
-      "technologies": [
-        "React",
-        "TypeScript",
-        "WebSockets",
-        "D3.js",
-        "WebGL",
-        "Rust"
-      ],
-      "githubUrl": "https://github.com/example/quantum-data-grid",
-      "liveUrl": "https://quantumgrid.example.com",
-      "featured": false,
-      "order": 6,
-      "_id": "proj_6"
+      "createdAt": "2026-09-20T20:45:57.726Z",
+      "updatedAt": "2026-09-20T20:45:57.726Z"
     }
   ],
   "certificates": [
     {
+      "_id": "6ab046054b71dc9278b2d46d",
       "title": "AWS Certified Solutions Architect - Associate",
       "issuer": "Amazon Web Services (AWS)",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
@@ -460,9 +503,11 @@
       "verificationUrl": "https://aws.amazon.com/verification",
       "order": 1,
       "isActive": true,
-      "_id": "cert_1"
+      "createdAt": "2026-09-20T20:45:57.826Z",
+      "updatedAt": "2026-09-20T20:45:57.826Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d46e",
       "title": "Google Cloud Professional Machine Learning Engineer",
       "issuer": "Google Cloud",
       "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
@@ -471,9 +516,11 @@
       "verificationUrl": "https://cloud.google.com/certification",
       "order": 2,
       "isActive": true,
-      "_id": "cert_2"
+      "createdAt": "2026-09-20T20:45:57.826Z",
+      "updatedAt": "2026-09-20T20:45:57.826Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d46f",
       "title": "Generative AI with Large Language Models",
       "issuer": "DeepLearning.AI & AWS",
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80",
@@ -482,9 +529,11 @@
       "verificationUrl": "https://coursera.org/verify",
       "order": 3,
       "isActive": true,
-      "_id": "cert_3"
+      "createdAt": "2026-09-20T20:45:57.826Z",
+      "updatedAt": "2026-09-20T20:45:57.826Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d470",
       "title": "Meta Professional Full-Stack Engineer",
       "issuer": "Meta",
       "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
@@ -493,9 +542,11 @@
       "verificationUrl": "https://coursera.org/verify",
       "order": 4,
       "isActive": true,
-      "_id": "cert_4"
+      "createdAt": "2026-09-20T20:45:57.826Z",
+      "updatedAt": "2026-09-20T20:45:57.826Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d471",
       "title": "MongoDB Certified Developer Associate",
       "issuer": "MongoDB University",
       "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80",
@@ -504,9 +555,11 @@
       "verificationUrl": "https://university.mongodb.com",
       "order": 5,
       "isActive": true,
-      "_id": "cert_5"
+      "createdAt": "2026-09-20T20:45:57.826Z",
+      "updatedAt": "2026-09-20T20:45:57.826Z"
     },
     {
+      "_id": "6ab046054b71dc9278b2d472",
       "title": "Docker Certified Associate (DCA)",
       "issuer": "Docker Inc.",
       "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=80",
@@ -515,7 +568,8 @@
       "verificationUrl": "https://docker.com",
       "order": 6,
       "isActive": true,
-      "_id": "cert_6"
+      "createdAt": "2026-09-20T20:45:57.826Z",
+      "updatedAt": "2026-09-20T20:45:57.826Z"
     }
   ],
   "experience": [
@@ -597,12 +651,15 @@
     }
   ],
   "siteSettings": {
+    "_id": "6ab046064b71dc9278b2d476",
     "defaultTheme": "dark",
     "defaultAccent": "purple",
     "seoTitle": "Purnendu Dutta Portfolio",
     "seoDescription": "Professional developer portfolio showcasing intelligent systems, full-stack web applications, technical skills, experience, and verified certifications.",
     "favicon": "/favicon.ico",
-    "ogImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80"
+    "ogImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "createdAt": "2026-09-20T20:45:58.017Z",
+    "updatedAt": "2026-09-20T20:45:58.017Z"
   },
   "messages": [
     {

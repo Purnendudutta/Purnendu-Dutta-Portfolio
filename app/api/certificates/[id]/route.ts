@@ -27,11 +27,11 @@ export async function PUT(
     const db = await connectDB();
     if (db && id.match(/^[0-9a-fA-F]{24}$/)) {
       const certificate = await Certificate.findByIdAndUpdate(id, body, { new: true });
-      revalidatePath("/");
+      revalidatePath("/", "layout");
       return NextResponse.json({ success: true, certificate });
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({
       success: true,
       certificate: idx !== -1 ? fallbackStore.certificates[idx] : body,
@@ -60,7 +60,7 @@ export async function DELETE(
       await Certificate.findByIdAndDelete(id);
     }
 
-    revalidatePath("/");
+    revalidatePath("/", "layout");
     return NextResponse.json({ success: true, message: "Certificate deleted successfully" });
   } catch (error: any) {
     return NextResponse.json({ error: "Failed to delete certificate" }, { status: 500 });
